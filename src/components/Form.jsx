@@ -19,6 +19,7 @@ export default function Form() {
 
   return (
     <>
+    <div className="form" id="container">
       <h2>Agrega una Tarea</h2>
       <input
         type="text"
@@ -30,7 +31,8 @@ export default function Form() {
       <button type="button" onClick={handleAddTask}>
         Agregar
       </button>
-      <div>
+    </div>
+      <div className='task-list'>
         {allTasks.map((tasks, index) => (
           <Notes key={index} tareas={tasks} />
         ))}
